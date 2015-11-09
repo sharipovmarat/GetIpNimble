@@ -5,7 +5,7 @@ var request = require("request")
 
 //var curl = require('node-curl');
 var actip;
-var dataip;
+
 //var md5 = require('md5');
 //var math = require('math');
 
@@ -46,7 +46,8 @@ var timer = setInterval(function(){
 
         //console.log(data[i].ip);
         //console.log(data[i].port);
-        requiest_url = '/manage/server_status?salt=225237&hash=HDf4PQa58LiUz6N+vD6DWg==';
+        var hash  = 'salt=225237&hash=HDf4PQa58LiUz6N+vD6DWg==';
+        requiest_url = '/manage/server_status?' + hash;
         var ip = ips[i].ip;
         //console.log(ip);
         var port = ips[i].port;
